@@ -16,7 +16,6 @@ function App() {
     // Push랑 같은 개념
     setToDos((currentArray) => [toDo, ...currentArray]); //매우매우 중요@@@@@@@
 
-    // 함수명 잘봐라
     setToDo("");
   };
   console.log(toDos);
