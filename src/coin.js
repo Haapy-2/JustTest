@@ -5,13 +5,11 @@ function FnCoin() {
   const [coins, setCoins] = useState([]);
   const [usd, setUsd] = useState(1);
   const [price, setPrice] = useState(1);
-
   // input value를 useState를 통해서 usd에 저장
   const onChangeInPut = (event) => {
     setUsd(event.target.value);
     console.log(usd);
   };
-
   // 선택한 option의 가격 useState를 통해서 price에 저장
   const onChangeBtcValue = (event) => {
     setPrice(event.target.value);
@@ -26,13 +24,10 @@ function FnCoin() {
         setLoading(false);
       });
   }, []);
-
   return (
     <div>
       <h1>the Coins! {loading ? "" : `(${coins.length})`}</h1>
-
-      <br></br>
-
+      <br/>
       {/* 로딩하고 있다면 Loading이 보여지고 아니면 코인을 보여준다 */}
       {loading ? (
         <strong>Loading...</strong>
@@ -52,7 +47,7 @@ function FnCoin() {
           ))}
         </select>
       )}
-      <br></br>
+      <br/>
       <input onChange={onChangeInPut} type="text" placeholder="$ "></input>
       <div>{usd / price} Available for purchase</div>
     </div>
